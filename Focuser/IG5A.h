@@ -1,11 +1,25 @@
+#include <cstdint>
+
 class IG5A
 {
     public:
-    
+
+       
+
         IG5A();
-    
+         //modbus contex
+        modbus_t *ctx;
+        
+        int ModbusInit(const char *device, int baud, char parity, int data_bit, int stop_bit);
+        uint16_t ModbusRead(int slaveAddress, int regAddress);
+        int ModbusWrite(int slaveAddress, int regAddress, uint16_t value);
+        void ModbusClose(void);
+
         int GetFrequencyCommand();
         void SetFrequencyCommand(int frequencyCommand);
+
+        
+
     
     private:
     
