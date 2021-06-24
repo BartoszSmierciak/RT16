@@ -1,4 +1,5 @@
 #include <cstdint>
+#include <modbus/modbus.h>
 
 class IG5A
 {
@@ -9,7 +10,7 @@ class IG5A
         IG5A();
          //modbus contex
         modbus_t *ctx;
-        
+
         int ModbusInit(const char *device, int baud, char parity, int data_bit, int stop_bit);
         uint16_t ModbusRead(int slaveAddress, int regAddress);
         int ModbusWrite(int slaveAddress, int regAddress, uint16_t value);

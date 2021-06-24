@@ -1,10 +1,8 @@
 make -f "/home/bart/Programowanie/RT16/Focuser/Makefile" --dry-run --keep-going --print-directory
 make: Entering directory '/home/bart/Programowanie/RT16'
+make: Leaving directory '/home/bart/Programowanie/RT16'
  
 make: *** No rule to make target 'main.cpp', needed by 'main.o'.
 make: *** No rule to make target 'IG5A.h', needed by 'main.o'.
-make: *** No rule to make target 'encoder.o', needed by 'all'.
-make: *** No rule to make target 'encoderRegisters.o', needed by 'all'.
- 
-make: Leaving directory '/home/bart/Programowanie/RT16'
+make: *** No rule to make target 'IG5A.cpp', needed by 'IG5A.o'.
  

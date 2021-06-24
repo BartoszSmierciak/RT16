@@ -1,6 +1,4 @@
 make all -f "/home/bart/Programowanie/RT16/Focuser/Makefile" --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'main.cpp', needed by 'main.o'.  Stop.
- 
 # GNU Make 4.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2014 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'main.cpp', needed by 'main.o'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jun 24 21:55:19 2021
+# Make data base, printed on Thu Jun 24 22:04:42 2021
 
 # Variables
 
@@ -185,7 +183,7 @@ BREAKPAD_DUMP_LOCATION = /home/bart/.config/Code/exthost Crash Reports
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # makefile (from '/home/bart/Programowanie/RT16/Focuser/Makefile', line 3)
-CFLAGSS = -g -Wall `pkg-config --cflags --libs libmodbus`
+CFLAGSS = -Wall `pkg-config --cflags --libs libmodbus`
 # environment
 GDK_BACKEND = x11
 # automatic
@@ -235,7 +233,6 @@ KDE_SESSION_UID = 1000
 # Implicit Rules
 
 # No implicit rules.
- 
 
 # Files
 
@@ -245,7 +242,7 @@ IG5A.h:
 #  Modification time never checked.
 #  File has not been updated.
 
-all: main.o encoder.o encoderRegisters.o
+all: main.o IG5A.o
 #  Command line target.
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -255,12 +252,6 @@ all: main.o encoder.o encoderRegisters.o
 
 # Not a target:
 IG5A.cpp:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-encoder.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -299,37 +290,34 @@ clean:
 # Not a target:
 /home/bart/Programowanie/RT16/Focuser/Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-24 21:51:32.845747065
+#  Last modified 2021-06-24 22:04:40.181292862
 #  File has been updated.
 #  Successfully updated.
 
 main.o: main.cpp IG5A.h
+ 
+make: *** No rule to make target 'main.cpp', needed by 'main.o'.  Stop.
+ 
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from '/home/bart/Programowanie/RT16/Focuser/Makefile', line 13):
-	$(CC) $(CFALGSS) -c main.c $(CFLAGSE)
-
-# Not a target:
-encoderRegisters.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+	$(CC) $(CFALGSS) -c main.cpp $(CFLAGSE)
 
 # files hash-table stats:
-# Load=13/1024=1%, Rehash=0, Collisions=0/33=0%
+# Load=11/1024=1%, Rehash=0, Collisions=0/31=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 15 / storage = 184 B / avg = 12 B
-# current buf: size = 8162 B / used = 184 B / count = 15 / avg = 12 B
+# strcache buffers: 1 (0) / strings = 13 / storage = 155 B / avg = 11 B
+# current buf: size = 8162 B / used = 155 B / count = 13 / avg = 11 B
 
-# strcache performance: lookups = 27 / hit rate = 44%
+# strcache performance: lookups = 26 / hit rate = 50%
 # hash-table stats:
-# Load=15/8192=0%, Rehash=0, Collisions=0/27=0%
-# Finished Make data base on Thu Jun 24 21:55:19 2021
+# Load=13/8192=0%, Rehash=0, Collisions=0/26=0%
+# Finished Make data base on Thu Jun 24 22:04:42 2021
 
  
