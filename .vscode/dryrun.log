@@ -1,5 +1,0 @@
-/usr/bin/make main -f "/home/bart/Programowanie/RT16/Focuser/Makefile" --dry-run --keep-going --print-directory
-make: Entering directory '/home/bart/Programowanie/RT16'
-gcc  -Wall `pkg-config --cflags --libs libmodbus` -lmodbus Focuser/main.cpp Focuser/IG5A.cpp -o main
-make: Leaving directory '/home/bart/Programowanie/RT16'
- 
