@@ -1,8 +1,5 @@
-make -f "/home/bart/Programowanie/RT16/Focuser/Makefile" --dry-run --keep-going --print-directory
+/usr/bin/make main -f "/home/bart/Programowanie/RT16/Focuser/Makefile" --dry-run --keep-going --print-directory
 make: Entering directory '/home/bart/Programowanie/RT16'
+gcc  -Wall `pkg-config --cflags --libs libmodbus` -lmodbus Focuser/main.cpp Focuser/IG5A.cpp -o main
 make: Leaving directory '/home/bart/Programowanie/RT16'
- 
-make: *** No rule to make target 'main.cpp', needed by 'main.o'.
-make: *** No rule to make target 'IG5A.h', needed by 'main.o'.
-make: *** No rule to make target 'IG5A.cpp', needed by 'IG5A.o'.
  

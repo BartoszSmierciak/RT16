@@ -1,19 +1,24 @@
-CC = gcc
+#compiler name
+CC := gcc 
 
-CFLAGSS  = -Wall `pkg-config --cflags --libs libmodbus`
+CFLAGS := -Wall `pkg-config --cflags --libs libmodbus` -lmodbus
 
-CFLAGSE  = -lmodbus
+#remove command
+RM := rm -rf
 
-default: all
+#source files
+SOURCES := Focuser/main.cpp Focuser/IG5A.cpp
 
-all: main.o IG5A.o
-	$(CC) $(CFLAGSS) main.o IG5A.o -o main $(CFLAGSE)
+#object files
+OBJS := $(SOURCES:.c=.o)
 
-main.o: main.cpp IG5A.h
-	$(CC) $(CFALGSS) -c main.cpp $(CFLAGSE)
+#main target
+main: $(OBJS)
+	$(CC) $(CFLAGS) $^ -o $@
 
-IG5A.o: IG5A.cpp IG5A.h
-	$(CC) $(CFLAGSS) -c IG5A.cpp $(CFLAGSE)
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
+.PHONY: clean
 clean:
-	$(RM) all *.o *~
+	$(RM) *.o main

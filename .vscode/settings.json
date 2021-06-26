@@ -1,3 +1,10 @@
 {
-    "makefile.extensionOutputFolder": "./.vscode"
+    "makefile.extensionOutputFolder": "./.vscode",
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/bart/Programowanie/RT16",
+            "binaryPath": "/home/bart/Programowanie/RT16/main",
+            "binaryArgs": []
+        }
+    ]
 }
